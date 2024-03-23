@@ -1,0 +1,94 @@
+/* HTML Part */
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This survey will help us to understand what you want in our future page</p>
+    <form id="survey-form">
+      <hr>
+      <label for="name" id="name-label">Enter your name <input type="text" id="name" placeholder="Name" required /></label>
+      <label for="email" id="email-label">Enter your email <input type="email" id="email" placeholder="Email" required /></label>
+      <label for="number" id="number-label">Enter your age <input type="number" min="18" max="99" id="number" placeholder="Age" required /></label>
+      <hr>
+      <label for="dropdown">Would you like to receive further info?
+        <select id="dropdown" name="dropdown">
+          <option>Yes, I would</option>
+          <option>No thanks</option>
+        </select>
+      </label>
+      <hr>
+      <legend>What is the reason filling this survey?</legend>
+      <label for="reason-label"><input id="reason-label" type="radio" name="fun-boring" value="1" class="inline" checked /> Fun</label>
+      <label for="reason"><input id="reason" type="radio" name="fun-boring" value="2" class="inline" /> Boring</label>
+      <hr>
+      <legend>Choose what you wanna see in our page</legend>
+      <label for="funny-label"><input id="funny-label" type="checkbox" name="funny" value="a" class="inline" /> Cars</label>
+      <label for="funny-label"><input id="funny-label" type="checkbox" name="funny" value="b" class="inline" /> Bikes</label>
+      <label for="funny-label"><input id="funny-label" type="checkbox" name="funny" value="c" class="inline" /> Soccer</label>
+      <label for="funny-label"><input id="funny-label" type="checkbox" name="funny" value="d" class="inline" /> Videogames</label>
+      <hr>
+      <label for="sugges-label">Leave a suggestion below
+        <textarea id="sugges-label" name="suggestion" rows="3" cols="30" placeholder="I would like to see..."></textarea>
+      </label>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+
+/* CSS Part */
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: 96CBB4;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input, textarea, select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 1.5em;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  width: 60%;
+  margin: 0 20%;
+}
+
+hr {
+  margin: 1em;
+  width: auto;
+  height: 1px;
+  background-color: 397F60;
+}
